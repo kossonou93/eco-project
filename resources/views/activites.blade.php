@@ -22,10 +22,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Activités</h2>
+						<h2>@lang('public.nosActivites')</h2>
 						<ul>
 							<li><a href="{{ route('home') }}">Home</a></li>
-							<li>Activités</li>
+							<li>@lang('public.nosActivites')</li>
 						</ul>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="section-title">
-						<h2>Nos Activités</h2>
+						<h2>@lang('public.nosActivites')</h2>
 					</div>
 				</div>
 			</div>
@@ -51,8 +51,8 @@
                             <li class="filter filter-active" data-filter=".all">all</li>
                             <!--<li class="filter" data-filter=".webdesign">web design</li>
                             <li class="filter" data-filter=".photography">photography</li>-->
-                            <li class="filter" data-filter=".application">Actions sociales</li>
-                            <li class="filter" data-filter=".branding">Formations des coopératives</li>
+                            <li class="filter" data-filter=".application">@lang('public.actionSociale')</li>
+                            <li class="filter" data-filter=".branding">@lang('public.formationCoop')</li>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="card border border-success shadow-0 mb-3">
                             <div class="card-body">
-                              <p class="card-text" style="text-align: center; font-weight: bold">Formations des coopérative aux bonnes pratiques agricoles</p>
+                              <p class="card-text" style="text-align: center; font-weight: bold">@lang('public.formationCooperative')</p>
                             </div>
                         </div>
                     </div>

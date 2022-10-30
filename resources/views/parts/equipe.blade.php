@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-title">
-                    <h6>Membre de l'équipe</h6>
-                    <h2>Equipe d'Expert</h2>
+                    <h6>@lang('public.membre')</h6>
+                    <h2>@lang('public.equipe')</h2>
                 </div>
             </div>
             <div class="col-lg-4 col-md-3"></div>

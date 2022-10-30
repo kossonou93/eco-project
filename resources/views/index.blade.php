@@ -27,10 +27,10 @@
 				<div class="col-lg-6">
 					<div class="overview-content">
 						<h2>ECOCAJOU SA</h2>
-						<p style="font-weight: 700; text-align: justify">est une société anonyme opérant dans l’achat, la transformation et l’exportation de noix et d’amandes de cajou certifiées BIO et FAIRTRADE. Elle est basée à Odienné dans la région du Kabadougou en Côte d’Ivoire. ECOCAJOU est née du groupe ECOOKIM, une union interrégionale de coopératives de café et cacao exportant plus de 55 000 tonnes de fèves de cacao par an ...</p>
+						<p style="font-weight: 700; text-align: justify">@lang('public.apropos1') ...</p>
 						<br>
 						<div class="services-btn-link">
-							<a href="{{ route('about') }}" class="services-link" style="font-weight: bold">Lire Plus</a>
+							<a href="{{ route('about') }}" class="services-link" style="font-weight: bold">@lang('public.lirePlus')</a>
 						</div>
 					</div>
 				</div>
@@ -39,58 +39,7 @@
 	</section>
 	
 	<!-- Start Services Section -->
-	<section class="services-section bg-grey">
-		<div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-					<div class="section-title">
-						<h2>Nos Services</h2>
-					</div>
-                </div>
-            </div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-services-item">
-						<div class="services-icon">
-							<!--<i class="flaticon-project-management"></i>-->
-							<img src="img/galerie/pese.jpeg" alt="image">
-						</div>
-						<h3>Fourniture des noix de cajou brutes</h3>
-						<p>Nous fournissons des noix de cajou brutes </p>
-						<div class="services-btn-link">
-							<a href="#" class="services-link">Lire Plus</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-services-item">
-						<div class="services-icon">
-							<!--<i class="flaticon-programming"></i>-->
-							<img src="img/galerie/amande.jpg" alt="image">
-						</div>
-						<h3>Fourniture des amandes de cajou BIO</h3>
-						<p>Nous fournissons des amandes de cajou BIO </p>
-						<div class="services-btn-link">
-							<a href="#" class="services-link">Lire Plus</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-services-item">
-						<div class="services-icon">
-							<!--<i class="flaticon-cpu-1"></i>-->
-							<img src="img/galerie/individuelle.jpeg" alt="image">
-						</div>
-						<h3>FAIRTRADE</h3>
-						<p>Nous faisons du FAIRTRADE</p>
-						<div class="services-btn-link">
-							<a href="#" class="services-link">Lire Plus</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	@include('parts.services')
 	<!-- End Services Section -->
 	
 	<!-- Start Overview Section -->

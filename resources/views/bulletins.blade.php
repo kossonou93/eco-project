@@ -22,10 +22,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Nos Bulletins</h2>
+						<h2>@lang('public.nosBulletins')</h2>
 						<ul>
 							<li><a href="{{ route('home') }}">Home</a></li>
-							<li>Nos Bulletins</li>
+							<li>@lang('public.nosBulletins')</li>
 						</ul>
 					</div>
 				</div>
@@ -40,35 +40,38 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="section-title">
-						<h2>Nos Bulletins</h2>
+						<h2>@lang('public.nosBulletins')</h2>
 					</div>
 				</div>
 			</div>
             <div class="row">
                 <div class="project-container">
                     <!-- project-item -->
-                    @foreach ($bulletins as $bulletin)
+                    
                         <div class="col-lg-12 col-md-12 project-grid-item">
                             <div class="project-item">
                                 <div class="card-body">
                                     <div class="media">
                                         <div class="row">
-                                            <div class="col-md-2">
-                                                <img class="wpdm_icon" alt="Icône" src="https://ecookim.com/wp-content/plugins/download-manager/assets/file-type-icons/pdf.svg">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h3 class="package-title"><a href="https://ecookim.com/download/mars-incorporated-soutient-14-000-producteurs-de-cacao-sur-la-voie-dun-revenu-de-subsistance-durable-dici-2030/">{{$bulletin->titre}}</a></h3>
-                                                <div class="text-muted text-small"><i class="fas fa-copy"></i> 1 fichier·s <i class="fas fa-hdd ml-3"></i> 89.79 KB</div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <a class="wpdm-download-link download-on-click btn btn-primary " rel="nofollow" href="{{ asset('uploads/bulletin/'.$bulletin->file)}}" data-downloadurl="{{ asset('uploads/bulletin/'.$bulletin->file)}}">Télécharger</a>
-                                            </div>
+											<table class="table">
+												<tbody>
+													
+													@foreach ($bulletins as $bulletin)
+													<tr>
+														<th scope="col"><img class="wpdm_icon" alt="Icône" src="{{asset('img/pdf.png')}}"></th>
+														<th scope="col"><h3 class="package-title">{{$bulletin->titre}}</h3></th>
+														<th scope="col"><a class="wpdm-download-link download-on-click btn btn-primary " rel="nofollow" href="{{ asset('uploads/bulletin/'.$bulletin->file)}}" data-downloadurl="{{ asset('uploads/bulletin/'.$bulletin->file)}}">@lang('public.telecharger')</a></th>
+													</tr>
+													@endforeach
+													
+												</tbody>
+											</table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    
                 </div>
             </div>
         </div>

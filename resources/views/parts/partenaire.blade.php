@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="section-title">
-                    <h2>Nos Partenaires</h2>
+                    <h2>@lang('public.nosPartenaires')</h2>
                 </div>
             </div>
         </div>
@@ -12,9 +12,9 @@
             <div class="col-md-12">
                 <div class="project-list">
                     <ul class="nav" id="project-flters">
-                        <li class="filter filter-active" data-filter=".all">Tous</li>
-                        <li class="filter" data-filter=".branding" onclick="showBranding('branding'); return false;">Techniques</li>
-                        <li class="filter" data-filter=".application" onclick="showApplication('application'); return false;">Financiers</li>
+                        <li class="filter filter-active" data-filter=".all">@lang('public.tous')</li>
+                        <li class="filter" data-filter=".branding" onclick="showBranding('branding'); return false;">@lang('public.techniques')</li>
+                        <li class="filter" data-filter=".application" onclick="showApplication('application'); return false;">@lang('public.financiers')</li>
                     </ul>
                 </div>
             </div> 

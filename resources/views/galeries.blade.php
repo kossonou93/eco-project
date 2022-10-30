@@ -23,10 +23,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Galerie Photo</h2>
+						<h2>@lang('public.galerie')</h2>
 						<ul>
-							<li><a href="{{route('home')}}">Accueil</a></li>
-							<li><a href=""></a>Galerie Photo</li>
+							<li><a href="{{route('home')}}">@lang('public.accueil')</a></li>
+							<li><a href=""></a>@lang('public.galerie')</li>
 						</ul>
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 							<div class="blog-content">
 								<h3>
                                     <a href="#">
-										Pesé de 1kg pour faire l'analyse
+										@lang('public.peserKg')
                                     </a>
                                 </h3>
 							</div>
@@ -68,7 +68,7 @@
 							<div class="blog-content">
 								<h3>
 									<a href="#">
-                                       Exercice d'analyse par groupe de trois personnes
+										@lang('public.exerciceAnalyseGroupe')
                                     </a>
 								</h3>
 							</div>
@@ -86,7 +86,7 @@
 							<div class="blog-content">
 								<h3>
                                     <a href="#">
-                                        Exercice d'analyse individuelle
+                                        @lang('public.exerciceAnalyseIndiv')
                                     </a>
                                 </h3>
 							</div>
@@ -104,7 +104,7 @@
 							<div class="blog-content">
 								<h3>
                                     <a href="#">
-										Brassage de l'échantillon
+										@lang('public.brassage')
                                     </a>
                                 </h3>
 							</div>
@@ -122,7 +122,7 @@
 							<div class="blog-content">
 								<h3>
 									<a href="#">
-                                       Le cartage
+										@lang('public.cartage')
                                     </a>
 								</h3>
 							</div>
@@ -140,7 +140,7 @@
 							<div class="blog-content">
 								<h3>
                                     <a href="#">
-										Retrait de deux cotés opposés
+										@lang('public.retraitDeux')
                                     </a>
                                 </h3>
 							</div>

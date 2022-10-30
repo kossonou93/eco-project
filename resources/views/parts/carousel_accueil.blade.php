@@ -9,14 +9,14 @@
                             <div class="col-lg-8 col-md-12">
                                 <div class="caption">
                                     <h1>ECOCAJOU SA</h1>
-                                    <p>Achats, Transformations et Exportations de cajou</p>
+                                    <p>@lang('public.slogan')</p>
                                     <div class="banner-btn home-slider-btn">
                                         <a href="{{route('about')}}" class="default-btn-one">
-                                            A propos
+                                            @lang('public.apropos')
                                             <span></span>
                                         </a>
                                         <a class="default-btn" href="{{route('contacts.index')}}">
-                                            Contactez-Nous
+                                            @lang('public.contactezNous')
                                             <span></span>
                                         </a>
                                     </div>
@@ -33,14 +33,14 @@
                             <div class="col-lg-8 col-md-12">
                                 <div class="caption">
                                     <h1>ECOCAJOU SA</h1>
-                                    <p>Achats, Transformations et Exportations de cajou</p>
+                                    <p>@lang('public.slogan')</p>
                                     <div class="banner-btn home-slider-btn">
                                         <a href="{{route('about')}}" class="default-btn-one">
-                                            A propos
+                                            @lang('public.apropos')
                                             <span></span>
                                         </a>
                                         <a class="default-btn" href="{{route('contacts.index')}}">
-                                            Contactez-Nous 
+                                            @lang('public.contactezNous') 
                                             <span></span>
                                         </a>
                                     </div>

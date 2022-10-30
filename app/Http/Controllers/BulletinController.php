@@ -40,24 +40,16 @@ class BulletinController extends Controller
     {
         $input = $request->all();
 
-        $validator = Validator::make($input, [
-            'titre' => 'required'
+        $request->validate([
+            'file' => 'required',
+            'titre' => 'required',
         ]);
 
-        $bulletin = new Bulletin();
-        $bulletin->titre = $input['titre'];;
-        $bulletin->texte = $input['texte'];;
-        $bulletin->file = $input['file'];;
-
-        if ($request->file('file')) {
-            @unlink(public_path('uploads/bulletin/'.$bulletin->file));
-            $bulletinFile = $request->file('file');
-            $bulletinName  = date('d-m-Y') . '.' . uniqid() . '.' . $bulletinFile->getClientOriginalName();
-            $bulletinPath  = public_path('uploads/bulletin');
-            $bulletinFile->move($bulletinPath, $bulletinName);
-            $bulletin->file = $bulletinName;
-        }
-        $bulletin->save();
+        $input = $request->all();
+        $fileName = time().'.'.$request->file->extension();  
+        $test = $request->file->move(public_path('uploads/bulletin'), $fileName);
+        $input['file'] = $fileName;
+        Bulletin::create($input);
         return redirect()->route('admin.home')->with('success', 'Document chargé avec succès!');
     }
 

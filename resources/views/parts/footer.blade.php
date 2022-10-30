@@ -10,9 +10,9 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <div class="footer-heading">
-                            <h3>A propos</h3>
+                            <h3>@lang('public.apropos')</h3>
                         </div>
-                        <p>Ecocajou est une société anonyme opérant dans l’achat, la transformation et l’exportation de noix et d’amandes de cajou certifiées BIO et FAIRTRADE. Elle est basée à Odienné dans la région du Kabadougou en Côte d’Ivoire. ECOCAJOU est née du groupe ECOOKIM, une union interrégionale de coopératives de café et cacao exportant plus de 55 000 tonnes de fèves de cacao par an ...</p>
+                        <p>Ecocajou SA @lang('public.apropos1')</p>
                         <ul class="footer-social">
                             <li>
                                 <a href="#"> <i class="fab fa-facebook-f"></i>
@@ -36,11 +36,11 @@
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <div class="footer-heading">
-                            <h3>Nos Services</h3>
+                            <h3>@lang('public.nosServices')</h3>
                         </div>
                         <ul class="footer-quick-links">
-                            <li> <a href="#">Fourniture des noix de cajou brutes</a></li>
-                            <li> <a href="#">Fourniture des amandes de cajou BIO</a></li>
+                            <li> <a href="#">@lang('public.fournitureBrute')</a></li>
+                            <li> <a href="#">@lang('public.fournitureBio')</a></li>
                             <li> <a href="#">FAIRTRADE</a></li>
                         </ul>
                     </div>
@@ -51,9 +51,9 @@
                             <h3>Lien Utiles</h3>
                         </div>
                         <ul class="footer-quick-links">
-                            <li><a href="{{ route('about')}}">A propos</a></li>
-                            <li><a href="{{ route('login')}}">Connexion</a></li>
-                            <li><a href="{{ route('contacts.index')}}">Contactez-Nous</a></li>
+                            <li><a href="{{ route('about')}}">@lang('public.apropos')</a></li>
+                            <li><a href="{{ route('login')}}" target="_blank">Connexion</a></li>
+                            <li><a href="{{ route('contacts.index')}}">@lang('public.contactezNous')</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
-                <p> <i class="far fa-copyright"></i> 2022 Ecocajou - Tout droit réservé.</p>
+                <p> <i class="far fa-copyright"></i> 2022 Ecocajou - @lang('public.droit').</p>
             </div>
             <!--<div class="col-lg-6 col-md-6">
                 <ul>

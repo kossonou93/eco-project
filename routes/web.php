@@ -14,7 +14,7 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', [Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [Controllers\AccueilController::class, 'index'])->name('index');
 Route::get('locale/{lang}', [Controllers\LocalizationController::class, 'setLang']);
 Route::get('/about', [Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/services', [Controllers\ServiceController::class, 'index'])->name('services');
@@ -26,5 +26,11 @@ Route::resource('/partenaires', Controllers\PartenaireController::class);
 Route::resource('/galeries', Controllers\GalerieController::class);
 Route::resource('/stories', Controllers\StoryController::class);
 Route::resource('/bulletins', Controllers\BulletinController::class);
+
+Auth::routes();
+
 Route::get('/login', [Controllers\AdminController::class, 'login'])->name('login');
 Route::get('/admin-home', [Controllers\AdminController::class, 'home'])->name('admin.home');
+Route::get('/register', [Controllers\AdminController::class, 'register'])->name('register');
+Route::get('/admin-bulletin', [Controllers\AdminController::class, 'bulletin'])->name('admin.bulletin');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

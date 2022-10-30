@@ -15,4 +15,14 @@ class AdminController extends Controller
     {
         return view('admin.home');
     }
+
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function bulletin()
+    {
+        return view('admin.bulletin');
+    }
 }

@@ -16,11 +16,11 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Nos Partenaires</h2>
+						<h2>@lang('public.nosPartenaires')</h2>
 						<ul>
 							<li><a href="index.html">Home</a>
 							</li>
-							<li>Nos Partenaires</li>
+							<li>@lang('public.nosPartenaires')</li>
 						</ul>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="section-title">
-						<h2>Nos Partenaires</h2>
+						<h2>@lang('public.nosPartenaires')</h2>
 					</div>
 				</div>
 			</div>

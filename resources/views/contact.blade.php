@@ -18,7 +18,7 @@
 					<div class="page-title-content">
 						<h2>Contact</h2>
 						<ul>
-							<li><a href="index.html">Accueil</a>
+							<li><a href="index.html">@lang('public.accueil')</a>
 							</li>
 							<li>Contact</li>
 						</ul>
@@ -35,8 +35,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-title">
-						<h6>Information Contact </h6>
-						<h2>Trouve nous</h2>
+						<h6>@lang('public.informationContact') </h6>
+						<h2>@lang('public.trouveNous')</h2>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
@@ -72,8 +72,8 @@
 	<div class="contact-section bg-grey section-padding">
 		<div class="container">
 			<div class="section-title">
-				<h6>Contactez nous</h6>
-				<h2>Envoyez nous un message</h2>
+				<h6>@lang('public.contactezNous')</h6>
+				<h2>@lang('public.envoyezNous')</h2>
 			</div>
 			<div class="row align-items-center">
 				<div class="col-lg-10 offset-lg-1">
@@ -84,31 +84,31 @@
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="name" id="name" class="form-control" required placeholder="Votre nom complet">
+										<input type="text" name="name" id="name" class="form-control" required placeholder="@lang('public.votreNomComplet')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="email" name="email" id="email" class="form-control" required placeholder="Votre adresse e-mail">
+										<input type="email" name="email" id="email" class="form-control" required placeholder="@lang('public.votreMail')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="phone" id="phone" required class="form-control" placeholder="Votre numéro de téléphone">
+										<input type="text" name="phone" id="phone" required class="form-control" placeholder="@lang('public.votrePhone')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="sujet" id="subject" class="form-control" required placeholder="Le sujet">
+										<input type="text" name="sujet" id="subject" class="form-control" required placeholder="@lang('public.sujet')">
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="form-group">
-										<textarea name="message" class="form-control" id="message" cols="30" rows="6" required placeholder="Votre message"></textarea>
+										<textarea name="message" class="form-control" id="message" cols="30" rows="6" required placeholder="@lang('public.votreMessage')"></textarea>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
-									<button type="submit" class="default-btn submit-btn">Envoyez <span></span></button>
+									<button type="submit" class="default-btn submit-btn">@lang('public.envoyez') <span></span></button>
 								</div>
 							</div>
 						</form>

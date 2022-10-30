@@ -26,86 +26,119 @@
 	<div class="wrapper wrapper-login">
 		<div class="container container-login animated fadeIn">
 			<h3 class="text-center">Connexion</h3>
-			<div class="login-form">
-				<div class="form-group">
-					<label for="username" class="placeholder"><b>Email</b></label>
-					<input id="username" name="username" type="text" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="password" class="placeholder"><b>Mot de Passe</b></label>
-					<a href="#" class="link float-right">Mot de Passe oubligé ?</a>
-					<div class="position-relative">
-						<input id="password" name="password" type="password" class="form-control" required>
-						<div class="show-password">
-							<i class="flaticon-interface"></i>
+			<form method="POST" action="{{ route('login') }}">
+				@csrf
+				<div class="login-form">
+					<div class="form-group">
+						<label for="email" class="placeholder"><b>Email</b></label>
+						<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+						@error('email')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
+					</div>
+					<div class="form-group">
+						<label for="password" class="placeholder"><b>Mot de Passe</b></label>
+						@if (Route::has('password.request'))
+							<a href="{{ route('password.request') }}" class="link float-right">Mot de Passe oubligé ?</a>
+						@endif
+						<div class="position-relative">
+							<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+							@error('password')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
+							<div class="show-password">
+								<i class="flaticon-interface"></i>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="form-group form-action-d-flex mb-3">
-					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="rememberme">
-						<label class="custom-control-label m-0" for="rememberme">Se souvenir de moi</label>
+					<div class="form-group form-action-d-flex mb-3">
+						<div class="custom-control custom-checkbox">
+							<input class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+							<label class="custom-control-label m-0" for="remember">Se souvenir de moi</label>
+						</div>
+						<button type="submit" class="btn btn-primary col-md-5 float-right mt-3 mt-sm-0 fw-bold">connexion</button>
 					</div>
-					<a href="{{ route('admin.home') }}" class="btn btn-primary col-md-5 float-right mt-3 mt-sm-0 fw-bold">connexion</a>
+					<!-- 				<div class="form-action">
+						<a href="#" class="btn btn-primary btn-rounded btn-login">Sign In</a>
+					</div> -->
+					<div class="login-account">
+						<span class="msg">Vous n'avez pas de Compte ?</span>
+						<a href="#" id="show-signup" class="link">Créer un Compte</a>
+					</div>
+					<br><br>
+					<div class="login-account">
+						<a href="{{ route('index') }}" class="link">Home</a>
+					</div>
 				</div>
-				<!-- 				<div class="form-action">
-					<a href="#" class="btn btn-primary btn-rounded btn-login">Sign In</a>
-				</div> -->
-				<div class="login-account">
-					<span class="msg">Vous n'avez pas de Compte ?</span>
-					<a href="#" id="show-signup" class="link">Créer un Compte</a>
-				</div>
-                <br><br>
-                <div class="login-account">
-					<a href="{{ route('home') }}" class="link">Home</a>
-				</div>
-			</div>
+			</form>
 		</div>
 
 		<div class="container container-signup animated fadeIn">
-			<h3 class="text-center">Sign Up</h3>
-			<div class="login-form">
-				<div class="form-group">
-					<label for="fullname" class="placeholder"><b>Fullname</b></label>
-					<input  id="fullname" name="fullname" type="text" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="email" class="placeholder"><b>Email</b></label>
-					<input  id="email" name="email" type="email" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="passwordsignin" class="placeholder"><b>Password</b></label>
-					<div class="position-relative">
-						<input  id="passwordsignin" name="passwordsignin" type="password" class="form-control" required>
-						<div class="show-password">
-							<i class="flaticon-interface"></i>
+			<h3 class="text-center">Créer un Compte</h3>
+			<form method="POST" action="{{ route('register') }}">
+				@csrf
+				<div class="login-form">
+					<div class="form-group">
+						<label for="name" class="placeholder"><b>Nom</b></label>
+						<input  id="name" name="name" type="text" class="form-control @error('name') is-invalid @enderror" required autocomplete="name" autofocus>
+						@error('name')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
+					</div>
+					<div class="form-group">
+						<label for="email" class="placeholder"><b>Email</b></label>
+						<input  id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+						@error('email')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
+					</div>
+					<div class="form-group">
+						<label for="password" class="placeholder"><b>Password</b></label>
+						<div class="position-relative">
+							<input  id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+							@error('password')
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $message }}</strong>
+								</span>
+							@enderror
+							<div class="show-password">
+								<i class="flaticon-interface"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password-confirm" class="placeholder"><b>Confirm Password</b></label>
+						<div class="position-relative">
+							<input  id="password-confirm" name="password_confirmation" type="password" class="form-control" required autocomplete="new-password">
+							<div class="show-password">
+								<i class="flaticon-interface"></i>
+							</div>
+						</div>
+					</div>
+					<div class="row form-sub m-0">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" name="agree" id="agree">
+							<label class="custom-control-label" for="agree">J'ai accepte les termes conditions.</label>
+						</div>
+					</div>
+					<div class="row form-action">
+						<div class="col-md-6">
+							<a href="#" id="show-signin" class="btn btn-danger btn-link w-100 fw-bold">Annuler</a>
+						</div>
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-primary w-100 fw-bold">Valider</button>
 						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="confirmpassword" class="placeholder"><b>Confirm Password</b></label>
-					<div class="position-relative">
-						<input  id="confirmpassword" name="confirmpassword" type="password" class="form-control" required>
-						<div class="show-password">
-							<i class="flaticon-interface"></i>
-						</div>
-					</div>
-				</div>
-				<div class="row form-sub m-0">
-					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" name="agree" id="agree">
-						<label class="custom-control-label" for="agree">I Agree the terms and conditions.</label>
-					</div>
-				</div>
-				<div class="row form-action">
-					<div class="col-md-6">
-						<a href="#" id="show-signin" class="btn btn-danger btn-link w-100 fw-bold">Cancel</a>
-					</div>
-					<div class="col-md-6">
-						<a href="#" class="btn btn-primary w-100 fw-bold">Sign Up</a>
-					</div>
-				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 	<script src="{{asset('admin/js/core/jquery.3.2.1.min.js')}}"></script>

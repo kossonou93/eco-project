@@ -3,7 +3,7 @@
         <div class="container">
             <div class="techvio-responsive-menu">
                 <div class="logo">
-                    <a href="{{route('home')}}">
+                    <a href="{{route('index')}}">
                         <img src="{{ asset('img/logo.png" class="white-logo')}}" alt="logo">
                         <img src="{{ asset('img/logo-black.png" class="black-logo')}}" alt="logo">
                     </a>
@@ -14,14 +14,14 @@
     <div class="techvio-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="{{route('home')}}">
+                <a class="navbar-brand" href="{{route('index')}}">
                     <img src="{{ asset('img/logo.png')}}" class="white-logo" alt="logo">
                     <img src="{{ asset('img/logo-black.png')}}" class="black-logo" alt="logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"> 
-                            <a href="{{route('home')}}" class="nav-link">Home</a>
+                            <a href="{{route('index')}}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('about')}}" class="nav-link">@lang('public.apropos')</a>
@@ -44,7 +44,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('galeries.index')}}" class="nav-link">@lang('public.galerie') Photo </a>
+                            <a href="{{route('galeries.index')}}" class="nav-link">@lang('public.galerie') </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('stories.index')}}" class="nav-link">@lang('public.nosRealisations')</a>

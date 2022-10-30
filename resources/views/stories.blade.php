@@ -22,10 +22,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Nos Réalisations</h2>
+						<h2>@lang('public.nosRealisations')</h2>
 						<ul>
 							<li><a href="{{ route('home') }}">Home</a></li>
-							<li>Nos Réalisations</li>
+							<li>@lang('public.nosRealisations')</li>
 						</ul>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12">
 					<div class="section-title">
-						<h2>Nos Réalisations</h2>
+						<h2>@lang('public.nosRealisations')</h2>
 					</div>
 				</div>
 			</div>

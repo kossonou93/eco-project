@@ -16,10 +16,10 @@
 			<div class="d-table-cell">
 				<div class="container">
 					<div class="page-title-content">
-						<h2>Faire un Don</h2>
+						<h2>@lang('public.faireDon')</h2>
 						<ul>
-							<li><a href="{{ route('home') }}">Accueil</a></li>
-							<li>Faire un Don</li>
+							<li><a href="{{ route('home') }}">Home</a></li>
+							<li>@lang('public.faireDon')</li>
 						</ul>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 	<div class="contact-section bg-grey section-padding">
 		<div class="container">
 			<div class="section-title">
-				<h2>Renseignez le formulaire ci-dessous</h2>
+				<h2>@lang('public.renseignezFormulaire')</h2>
 			</div>
 			<div class="row align-items-center">
 				<div class="col-lg-10 offset-lg-1">
@@ -43,40 +43,40 @@
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="name" id="name" class="form-control" required placeholder="Votre nom complet">
+										<input type="text" name="name" id="name" class="form-control" required placeholder="@lang('public.votreNomComplet')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="email" name="email" id="email" class="form-control" required placeholder="Votre adresse e-mail">
+										<input type="email" name="email" id="email" class="form-control" required placeholder="@lang('public.votreMail')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="phone" id="phone" required class="form-control" placeholder="Votre numéro de téléphone">
+										<input type="text" name="phone" id="phone" required class="form-control" placeholder="@lang('public.votrePhone')">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="sujet" id="subject" class="form-control" required placeholder="Le sujet">
+										<input type="text" name="sujet" id="subject" class="form-control" required placeholder="@lang('public.sujet')">
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="form-group">
 										<select name="categorie_id" name="type" class="form-control input">
-											<option>Choississez le Type de Don</option>
-											<option value='Nature'>En Nature</option>
-											<option value='Argent'>En Argent</option>
+											<option>@lang('public.choixDon')</option>
+											<option value='Nature'>@lang('public.sujet')</option>
+											<option value='Argent'>@lang('public.sujet')</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="form-group">
-										<textarea name="message" class="form-control" id="message" cols="30" rows="6" required placeholder="Votre message"></textarea>
+										<textarea name="message" class="form-control" id="message" cols="30" rows="6" required placeholder="@lang('public.votreMessage')"></textarea>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
-									<button type="submit" class="default-btn submit-btn">Envoyez <span></span></button>
+									<button type="submit" class="default-btn submit-btn">@lang('public.envoyez') <span></span></button>
 								</div>
 							</div>
 						</form>
