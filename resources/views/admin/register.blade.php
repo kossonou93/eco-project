@@ -19,7 +19,7 @@
                                 </div>
 								<div class="card-body login">
                                     <div class="container animated fadeIn">
-                                        <form method="POST" action="{{ route('register') }}">
+                                        <form method="POST" action="{{ route('admin.register') }}">
                                             @csrf
                                             <div class="login-form">
                                                 <div class="form-group">

@@ -117,7 +117,7 @@
                                     </a>
                                 </li>-->
                                 <li>
-                                    <a href="{{ route('register') }}" id="show-signup" class="link">
+                                    <a href="{{ route('register') }}" class="link">
                                         <span class="sub-item">Créer Compte Admin</span>
                                     </a>
                                 </li>

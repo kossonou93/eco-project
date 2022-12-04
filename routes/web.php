@@ -30,7 +30,10 @@ Route::resource('/bulletins', Controllers\BulletinController::class);
 Auth::routes();
 
 Route::get('/login', [Controllers\AdminController::class, 'login'])->name('login');
+//Route::get('/admin-login', [Controllers\AdminController::class, 'login'])->name('login');
+Route::post('/admin-login', [Controllers\AdminController::class, 'adminLogin'])->name('admin.login');
 Route::get('/admin-home', [Controllers\AdminController::class, 'home'])->name('admin.home');
 Route::get('/register', [Controllers\AdminController::class, 'register'])->name('register');
+Route::post('/admin-register', [Controllers\AdminController::class, 'adminRegister'])->name('admin.register');
 Route::get('/admin-bulletin', [Controllers\AdminController::class, 'bulletin'])->name('admin.bulletin');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

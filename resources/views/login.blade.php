@@ -141,7 +141,13 @@
 			</form>
 		</div>
 	</div>
+	@include('sweetalert::alert')
 	<script src="{{asset('admin/js/core/jquery.3.2.1.min.js')}}"></script>
+	<script>
+		setTimeout(function(){
+			$('.loader_bg').fadeToggle();
+		}, 1500);
+	</script>
 	<script src="{{asset('admin/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js')}}"></script>
 	<script src="{{asset('admin/js/core/popper.min.js')}}"></script>
 	<script src="{{asset('admin/js/core/bootstrap.min.js')}}"></script>

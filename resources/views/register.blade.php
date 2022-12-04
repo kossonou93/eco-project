@@ -27,7 +27,7 @@
 
 		<div class="container container-login animated fadeIn">
 			<h3 class="text-center">Créer un Compte</h3>
-			<form method="POST" action="{{ route('register') }}">
+			<form method="POST" action="{{ route('admin.register') }}">
 				@csrf
 				<div class="login-form">
 					<div class="form-group">

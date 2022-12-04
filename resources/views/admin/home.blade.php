@@ -13,12 +13,13 @@
 								<div class="card-header">
 									<div class="row row-nav-line">
 										<ul class="nav nav-tabs nav-line nav-color-secondary" role="tablist">
-											<li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Ajouter des Bulletins</a> </li>
+											<li class="nav-item"> <a class="nav-link active show" data-toggle="tab" href="#home" role="tab" aria-selected="true">Ajouter Un Bulletin</a> </li>
 											<!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-selected="false">Profile</a> </li>
 											<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Settings</a> </li>-->
 										</ul>
 									</div>
 								</div>
+								<br><br><br>
 								<div class="card-body">
 									<form id="contact-form" class="contact-form form" action="{{ route('bulletins.store') }}" method="POST" enctype="multipart/form-data">
 										@csrf

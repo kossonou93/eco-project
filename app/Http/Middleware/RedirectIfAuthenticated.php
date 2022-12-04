@@ -24,10 +24,25 @@ class RedirectIfAuthenticated
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
                 //return redirect(RouteServiceProvider::HOME);
+                /*if (Auth::user()->authorize != '1') {
+                    Auth::logout();
+                    return redirect()->route('login')->with('info', "Veillez contacter l'administrateur pour une autorisation de Connexion!");
+                }
+                else {
+                    Auth::logout();
+                    return redirect()->route('index')->with('info', "Veillez contacter l'administrateur pour une autorisation de Connexion!");
+                }*/
+                //dd(Auth::guard($guard)->user()->authorize);
+                //return redirect()->route('login');
                 return redirect("admin-home");
             }
         }
 
+        /*if (Auth::user()->authorize != '1') {
+            Auth::logout();
+            return redirect()->route('login')->with('info', "Veillez contacter l'administrateur pour une autorisation de Connexion!");
+        }*/
+        //dd($guards);
         return $next($request);
     }
 }
